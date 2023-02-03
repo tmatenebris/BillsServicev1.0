@@ -1,0 +1,40 @@
+﻿<Window x:Class="BillsServiceClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BillsServiceClient"
+        mc:Ignorable="d"
+        Title="MainWindow"         
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Path=Value, Mode=OneWay}"
+        Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Path=Value, Mode=OneWay}">
+    
+
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center"> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Welcome to BillsService" HorizontalAlignment="Center" FontSize="24" Foreground="Blue"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Username:" Margin="10" FontSize="16" Foreground="Blue"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="10" FontSize="16"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Password:" Margin="10" FontSize="16" Foreground="Blue"/>
+        <PasswordBox Grid.Row="2" Grid.Column="1" Margin="10" FontSize="16"/>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Login" Margin="10" Width="70" Height="30" Foreground="White" Background="Blue" Click="Login_Click" />
+            <Button Content="Signup" Margin="10" Width="70" Height="30" Foreground="White" Background="Blue" Click="Signup_Click"/>
+            <Button Content="Close" Margin="10" Width="70" Height="30" Foreground="White" Background="Blue" Click="Close_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

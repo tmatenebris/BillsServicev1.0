@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="BillsServiceController" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBillsService_Hello_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hello" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_Hello_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetBills_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBills" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetBills_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetLiabilities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLiabilities" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetLiabilities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLiabilitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserData" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetPdf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPdf" />
+  </wsdl:message>
+  <wsdl:message name="IBillsService_GetPdf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPdfResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBillsService">
+    <wsdl:operation name="Hello">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/Hello" message="tns:IBillsService_Hello_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/HelloResponse" message="tns:IBillsService_Hello_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBills">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/GetBills" message="tns:IBillsService_GetBills_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/GetBillsResponse" message="tns:IBillsService_GetBills_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/Register" message="tns:IBillsService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/RegisterResponse" message="tns:IBillsService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/Login" message="tns:IBillsService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/LoginResponse" message="tns:IBillsService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiabilities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/GetLiabilities" message="tns:IBillsService_GetLiabilities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/GetLiabilitiesResponse" message="tns:IBillsService_GetLiabilities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/GetUserData" message="tns:IBillsService_GetUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/GetUserDataResponse" message="tns:IBillsService_GetUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/UpdateUser" message="tns:IBillsService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/UpdateUserResponse" message="tns:IBillsService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/DeleteUser" message="tns:IBillsService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/DeleteUserResponse" message="tns:IBillsService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPdf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBillsService/GetPdf" message="tns:IBillsService_GetPdf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBillsService/GetPdfResponse" message="tns:IBillsService_GetPdf_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBillsService" type="tns:IBillsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Hello">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/Hello" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBills">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/GetBills" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiabilities">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/GetLiabilities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPdf">
+      <soap:operation soapAction="http://tempuri.org/IBillsService/GetPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BillsServiceController">
+    <wsdl:port name="BasicHttpBinding_IBillsService" binding="tns:BasicHttpBinding_IBillsService">
+      <soap:address location="http://localhost:8000/MyBillsService/service" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
